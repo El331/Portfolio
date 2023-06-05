@@ -10,10 +10,10 @@
 }
 
 :root {
-  --bg-color: #0B2447;
-  --second-bg-color: #19376D;
+  --bg-color: #0b2447;
+  --second-bg-color: #19376d;
   --text-color: #fff;
-  --main-color: #00FFCA;
+  --main-color: #00ffca;
 }
 
 html {
@@ -67,12 +67,6 @@ section {
   color: var(--main-color);
 }
 
-#menu-icon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  display: none;
-}
-
 .home {
   display: flex;
   justify-content: center;
@@ -88,9 +82,9 @@ section {
   font-weight: 700;
 }
 
-.home-content h3:nth-of-type(2) {
+/* .home-content h3:nth-of-type(2) {
   margin-bottom: 2rem;
-}
+} */
 
 span {
   color: var(--main-color);
@@ -127,18 +121,6 @@ span {
   box-shadow: 0 0 1rem var(--main-color);
 }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  background: var(--main-color);
-  border-radius: 4rem;
-  box-shadow: 0 0 1 rem var(--main-color);
-  font-size: 1.6rem;
-  color: var(--second-bg-color);
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-}
-
 .about {
   display: flex;
   justify-content: center;
@@ -166,7 +148,7 @@ span {
 }
 
 .about-content p {
-  font-size: 2.6rem;
+  font-size: 1.6rem;
   margin: 2rem 0 3rem;
 }
 
@@ -283,44 +265,28 @@ span {
   border-radius: 50%;
 }
 
-.contact h2 {
-  margin-bottom: 3rem;
+form {
+  margin-top: 60px;
 }
 
-.contact form {
-  max-width: 70rem;
-  margin: 1rem auto;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.contact form .input-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.contact form .input-box input,
-.contact form textarea {
+form input,
+textarea {
   width: 100%;
-  padding: 1.5rem;
+  padding: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  background-color: var(--second-bg-color);
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
   font-size: 1.6rem;
-  color: var(--text-color);
-  background: var(--second-bg-color);
-  border-radius: 0.8rem;
-  margin: 0.7rem 0;
-}
-
-.contact form .input-box input {
-  width: 49%;
-}
-
-.contact form textarea {
-  resize: none;
-}
-
-.contact form .btn {
-  margin-top: 2rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -335,4 +301,46 @@ span {
 
 .footer p {
   font-size: 1.6rem;
+}
+
+/* responsive */
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: var(--bg-color);
+    display: none;
+  }
+
+  .navbar .active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
 }
